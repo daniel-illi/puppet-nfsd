@@ -14,6 +14,7 @@ class nfsd::base {
         enable => true,
         ensure => running, 
         require => Service["portmap"],
-        hasstatus => true,
+        hasstatus => false,
+        pattern => 'nfsd',
     }
 }
